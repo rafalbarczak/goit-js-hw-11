@@ -35,6 +35,7 @@ function buildGallery(photos) {
   if (photos.totalHits > 0) {
     Notiflix.Notify.success(`Horray! We found ${photos.totalHits} images.`);
   } else {
+    loadBtn.classList.add('is-hidden');
     Notiflix.Notify.failure(
       'Sorry, there are no images matching your search query. Please try Again.'
     );
